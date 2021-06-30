@@ -11,8 +11,10 @@
   --gray-dark: #4d5e77;
   --gray-blue: #a1b2cd;
   --gray-light: #e5eaf1;
+  --gray-medium: #eaecf2;
 
-  font-size: 62.5%; /* 10px of 16px*/
+  font-size: 62.5%;
+  /* 10px of 16px*/
 }
 
 * {
@@ -22,23 +24,27 @@
   text-decoration: none;
   box-sizing: border-box;
 }
-body{
+
+body {
   display: flex;
   height: 100vh;
   background: var(--background);
 }
 
-body, button, input, textarea{
+body,
+button,
+input,
+textarea {
   font-size: clamp(14px, 1.6rem, 2vw);
   font-family: 'Open Sans', sans-serif;
 }
 
-.content{
+.content {
   width: 100%;
   margin: 0 auto;
 }
 
-.sr-only{
+.sr-only {
   position: absolute;
   height: 1px;
   width: 1px;
@@ -50,12 +56,15 @@ body, button, input, textarea{
   border-width: 0;
 }
 
-input, button, .button{
+input,
+button,
+.button {
   border-radius: .8rem;
   height: 5rem;
 }
 
-button, .button{
+button,
+.button {
   font-family: 'Poppins';
   font-weight: 500;
   line-height: 0;
@@ -72,40 +81,41 @@ button, .button{
   cursor: pointer;
 }
 
-button:hover, .button:hover{
+button:hover,
+.button:hover {
   filter: brightness(1.2);
 }
 
-button > img,
-.button > img{
+button>img,
+.button>img {
   margin-right: 1rem;
   width: 2rem;
 }
 
 button.outlined,
-.button.outlined{
+.button.outlined {
   background: var(--white);
   color: var(--blue);
   border: .2rem solid var(--blue);
 }
 
 button.red,
-.button.red{
+.button.red {
   background: var(--red);
   color: var(--white);
 }
 
 button.gray,
-.button.gray{
+.button.gray {
   background: var(--gray-light);
   color: var(--gray-dark);
 }
 
-.content header{
+.content header {
   width: 80%;
   margin: 3.5rem auto;
 }
 
-.content header img{
+.content header img {
   width: 16.7rem;
 }
