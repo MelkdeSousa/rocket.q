@@ -1,0 +1,25 @@
+{
+  "name": "@melkdesousa/rocket.q",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "git@github.com:MelkdeSousa/rocket.q.git",
+  "author": "MelkdeSousa <melk.sousap@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "server": "nodemon src/server.js",
+    "start": "node .",
+    "database:setup": "sucrase-node src/database/setup.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9",
+    "sucrase": "^3.19.0"
+  }
+}
