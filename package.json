@@ -7,10 +7,12 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "sucrase ./src -d ./dist --transforms imports",
+    "build": "sucrase ./src -d ./dist --transforms imports && cp -r ./src/views/* ./dist/views/",
     "server": "nodemon src/server.js",
-    "start": "node .",
-    "database:setup": "sucrase-node src/database/setup.js"
+    "start": "node ./dist/server.js",
+    "prestart": "node ./dist/database/setup.js",
+    "database:setup": "sucrase-node src/database/setup.js",
+    "database:delete": "rm src/database/rocket.q.sqlite"
   },
   "dependencies": {
     "ejs": "^3.1.6",
